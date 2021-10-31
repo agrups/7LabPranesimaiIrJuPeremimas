@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">7 Lab Pranesimai, Ju Peremimas</string>
+    <string name="text">Akumuliatoriaus lygio sekimas</string>
+    <string name="channel_name">name</string>
+    <string name="channel_description">description</string>
+</resources>
