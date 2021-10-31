@@ -25,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Switch aSwitch;
-    private static final String CHANNEL_ID = "KANALASPRANESIMAMS";
+    private static final String CHANNEL_ID = "kanalas";
     public static boolean IsTracked = false;
     private static List<BroadcastReceiver> receivers = new ArrayList<>();
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     float batteryPct = level * 100 / (float) scale;
                     Toast.makeText(context, String.valueOf(batteryPct), Toast.LENGTH_LONG).show();
                     if (batteryPct < 25.0) {
-                        SendNotification();
+                        sendNotification();
                     }
                 }
             }
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void SendNotification(){
+    public void sendNotification(){
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
